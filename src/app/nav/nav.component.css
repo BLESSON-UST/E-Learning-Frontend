@@ -1,0 +1,35 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navigation ul li {
+    margin-right: 15px;
+  }
+  
+  .navigation ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-section a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
