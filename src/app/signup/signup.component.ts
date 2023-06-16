@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-signup',
@@ -6,17 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  name: string | any;
-  email: string| any;
-  phone: string| any;
-  password: string| any;
+  name: string = '';
+  email: string = '';
+  phone: string = '';
+  password: string = '';
 
-  signUp() {
-    // Implement the signup functionality here
-    console.log('Sign up clicked!');
-    console.log('Name:', this.name);
-    console.log('Email:', this.email);
-    console.log('Phone:', this.phone);
-    console.log('Password:', this.password);
+  constructor(private http: HttpClient) {}
+
+  signUp(): void {
+    const signupData = {
+      name: this.name,
+      email: this.email,
+      phone: this.phone,
+      password: this.password
+    };
+
+    this.http.post('http://localhost:8081/signup/post', signupData).subscribe(
+      (response) => {
+        console.log('Signup successful:', response);
+        // Handle successful signup response, e.g., show success message
+      },
+      (error) => {
+        console.error('Signup error:', error);
+        // Handle error response, e.g., show error message
+      }
+    );
   }
 }

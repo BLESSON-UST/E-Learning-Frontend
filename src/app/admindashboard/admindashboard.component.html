@@ -1,0 +1,22 @@
+<h2>Admin Dashboard</h2>
+
+<!-- Add Course Button -->
+<button class="btn btn-primary" (click)="addCourse()">Add Course</button>
+
+<hr>
+
+<!-- Course List -->
+<h3>Course List</h3>
+<div class="course-list">
+  <div class="course-thumbnail" *ngFor="let course of courses">
+    <img [src]="course.image" alt="Course Thumbnail" class="thumbnail-image">
+    <div class="thumbnail-content">
+      <h4>{{ course.title }}</h4>
+      <p>{{ course.description }}</p>
+      <div class="button-group">
+        <button class="btn btn-primary" (click)="editCourse(course)">Edit</button>
+        <button class="btn btn-secondary" (click)="viewCourse(course)">View</button>
+      </div>
+    </div>
+  </div>
+</div>

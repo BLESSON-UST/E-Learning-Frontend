@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { AdminDashboardComponent } from './admindashboard/admindashboard.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'home' , component:HomeComponent},
   {path: 'contactus', component:FooterComponent},
   {path: 'userdashboard', component:UserdashboardComponent},
+  {path: 'admindashboard', component:AdminDashboardComponent},
   {path: '',redirectTo:'/home',pathMatch:'full'}
 ];
 

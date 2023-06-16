@@ -1,0 +1,30 @@
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .course-thumbnail {
+    flex: 0 0 300px; /* Adjust the width as needed */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .thumbnail-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .thumbnail-content {
+    margin-top: 10px;
+  }
+  
+  .button-group {
+    margin-top: 10px;
+  }
+  
+  .button-group button {
+    margin-right: 5px;
+  }
+  
